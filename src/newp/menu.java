@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package newp;
+import anther.*;
 
 /**
  *
@@ -17,9 +18,10 @@ public class menu extends javax.swing.JFrame {
     public menu() {
         this.setLocationRelativeTo(null);
         initComponents();
-        String[] a = {"Calculadora", "Tienda ABC"};
+        String[] a = {"Calculadora", "Tienda ABC", "Notas Estudiantes"};
         this.menu.addItem(a[0]);
         this.menu.addItem(a[1]);
+        this.menu.addItem(a[2]);
     }
 
     /**
@@ -84,14 +86,22 @@ public class menu extends javax.swing.JFrame {
 
     private void okBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okBTNActionPerformed
         String objeto = this.menu.getSelectedItem().toString();
-        if (objeto == "Calculadora") {
-            fp newFp = new fp();
-            newFp.setVisible(true);
-            this.dispose();
-        }else if(objeto == "Tienda ABC"){
-            fp2 newFp2 = new fp2();
-            newFp2.setVisible(true);
-            this.dispose();
+        switch(objeto){
+            case "Calculadora":
+                fp newFp = new fp();
+                newFp.setVisible(true);
+                this.dispose();
+                break;
+            case "Tienda ABC":
+                fp2 newFp2 = new fp2();
+                newFp2.setVisible(true);
+                this.dispose();
+                break;
+            case "Notas Estudiantes":
+                estudiantes newEst3 = new estudiantes();
+                newEst3.setVisible(true);
+                this.dispose();
+                break;
         }
     }//GEN-LAST:event_okBTNActionPerformed
 
