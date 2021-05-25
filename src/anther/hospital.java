@@ -15,7 +15,7 @@ public class hospital extends javax.swing.JFrame {
      * Creates new form hospital
      */
     public hospital() {
-        this.setLocation((1080/2), 50);
+        this.setLocation((1080 / 2), 50);
         initComponents();
     }
 
@@ -142,7 +142,7 @@ public class hospital extends javax.swing.JFrame {
         b = Double.parseDouble(this.presupuestoTXT.getText()) * 0.40;
         c = Double.parseDouble(this.presupuestoTXT.getText()) * 0.30;
         d = Double.parseDouble(this.presupuestoTXT.getText()) * 0.10;
-        
+
         this.gineLBL.setText(String.valueOf(a));
         this.oncoLBL.setText(String.valueOf(b));
         this.pedLBL.setText(String.valueOf(c));
