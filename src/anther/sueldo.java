@@ -21,6 +21,7 @@ public class sueldo extends javax.swing.JFrame {
     }
     
     public sueldo() {
+        this.setLocation((1080/2), 50);
         initComponents();
     }
 
@@ -41,7 +42,8 @@ public class sueldo extends javax.swing.JFrame {
         calcBTN = new javax.swing.JButton();
         exitBTN = new javax.swing.JButton();
         EraserBTN = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        resLBL1 = new javax.swing.JLabel();
+        resLBL2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,7 +61,7 @@ public class sueldo extends javax.swing.JFrame {
                 ventasRBTNActionPerformed(evt);
             }
         });
-        getContentPane().add(ventasRBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
+        getContentPane().add(ventasRBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel3.setText("Sueldo");
@@ -71,7 +73,7 @@ public class sueldo extends javax.swing.JFrame {
                 calcBTNActionPerformed(evt);
             }
         });
-        getContentPane().add(calcBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 400, 34));
+        getContentPane().add(calcBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 400, 34));
 
         exitBTN.setText("Salir");
         exitBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +81,7 @@ public class sueldo extends javax.swing.JFrame {
                 exitBTNActionPerformed(evt);
             }
         });
-        getContentPane().add(exitBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 180, 34));
+        getContentPane().add(exitBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 180, 34));
 
         EraserBTN.setText("Borrar");
         EraserBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -87,14 +89,18 @@ public class sueldo extends javax.swing.JFrame {
                 EraserBTNActionPerformed(evt);
             }
         });
-        getContentPane().add(EraserBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 180, 34));
+        getContentPane().add(EraserBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 180, 34));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 400, 34));
+        resLBL1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        resLBL1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(resLBL1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 400, 34));
+
+        resLBL2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        resLBL2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(resLBL2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 400, 34));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/working-wallpaper.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 447, 370));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 447, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -109,11 +115,27 @@ public class sueldo extends javax.swing.JFrame {
 
     private void EraserBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EraserBTNActionPerformed
         this.sueldoTXT.setText("");
+        this.resLBL1.setText("");
+        this.resLBL2.setText("");
         this.ventasRBTN.setSelected(false);
         this.ventas = false;
     }//GEN-LAST:event_EraserBTNActionPerformed
 
     private void calcBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcBTNActionPerformed
+        double a = Double.parseDouble(this.sueldoTXT.getText());
+        double b = a * 0.10;
+        double c;
+        boolean ven = getVentas();
+        
+        if (ven) {
+            this.resLBL1.setText(String.valueOf(b));
+            c = a + b;
+        }else{
+            this.resLBL1.setText("0");
+            c = a;
+        }
+        
+        this.resLBL2.setText(String.valueOf(c));
         
     }//GEN-LAST:event_calcBTNActionPerformed
 
@@ -160,7 +182,8 @@ public class sueldo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel resLBL1;
+    private javax.swing.JLabel resLBL2;
     private javax.swing.JTextField sueldoTXT;
     private javax.swing.JRadioButton ventasRBTN;
     // End of variables declaration//GEN-END:variables

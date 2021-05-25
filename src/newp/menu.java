@@ -18,10 +18,11 @@ public class menu extends javax.swing.JFrame {
     public menu() {
         this.setLocationRelativeTo(null);
         initComponents();
-        String[] a = {"Calculadora", "Tienda ABC", "Notas Estudiantes"};
+        String[] a = {"Calculadora", "Tienda ABC", "Notas Estudiantes", "Salario"};
         this.menu.addItem(a[0]);
         this.menu.addItem(a[1]);
         this.menu.addItem(a[2]);
+        this.menu.addItem(a[3]);
     }
 
     /**
@@ -100,6 +101,11 @@ public class menu extends javax.swing.JFrame {
             case "Notas Estudiantes":
                 estudiantes newEst3 = new estudiantes();
                 newEst3.setVisible(true);
+                this.dispose();
+                break;
+            case  "Salario":
+                sueldo newSal = new sueldo();
+                newSal.setVisible(true);
                 this.dispose();
                 break;
         }
