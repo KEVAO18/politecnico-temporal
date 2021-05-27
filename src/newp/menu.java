@@ -18,13 +18,14 @@ public class menu extends javax.swing.JFrame {
     public menu() {
         this.setLocationRelativeTo(null);
         initComponents();
-        String[] a = {"Calculadora", "Tienda ABC", "Notas Estudiantes", "Salario", "Hospital", "Cronometrar"};
+        String[] a = {"Calculadora", "Tienda ABC", "Notas Estudiantes", "Salario", "Hospital", "Cronometrar", "Calculadora 2.0"};
         this.menu.addItem(a[0]);
         this.menu.addItem(a[1]);
         this.menu.addItem(a[2]);
         this.menu.addItem(a[3]);
         this.menu.addItem(a[4]);
         this.menu.addItem(a[5]);
+        this.menu.addItem(a[6]);
     }
 
     /**
@@ -118,6 +119,11 @@ public class menu extends javax.swing.JFrame {
             case  "Cronometrar":
                 crono newCro = new crono();
                 newCro.setVisible(true);
+                this.dispose();
+                break;
+            case  "Calculadora 2.0":
+                pdf4 newcalc2 = new pdf4();
+                newcalc2.setVisible(true);
                 this.dispose();
                 break;
         }
