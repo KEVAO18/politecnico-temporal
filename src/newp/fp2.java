@@ -150,6 +150,8 @@ public class fp2 extends javax.swing.JFrame {
     }//GEN-LAST:event_limpiarBTNActionPerformed
 
     private void salirBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBTNActionPerformed
+        menu menu = new menu();
+        menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_salirBTNActionPerformed
 

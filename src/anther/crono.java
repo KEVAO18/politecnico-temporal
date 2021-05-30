@@ -5,6 +5,8 @@
  */
 package anther;
 
+import newp.menu;
+
 /**
  *
  * @author casa
@@ -138,6 +140,8 @@ public class crono extends javax.swing.JFrame {
     }//GEN-LAST:event_viernesTxtActionPerformed
 
     private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
+        menu menu = new menu();
+        menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_salirBtnActionPerformed
 

@@ -5,6 +5,8 @@
  */
 package anther;
 
+import newp.menu;
+
 /**
  *
  * @author PCUNO
@@ -125,7 +127,9 @@ public class estudiantes extends javax.swing.JFrame {
     }//GEN-LAST:event_borrarBTNActionPerformed
 
     private void salirBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBTNActionPerformed
-        this.dispose();
+        menu menu = new menu();
+        menu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_salirBTNActionPerformed
 
     /**

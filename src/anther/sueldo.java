@@ -5,6 +5,8 @@
  */
 package anther;
 
+import newp.menu;
+
 /**
  *
  * @author PCUNO
@@ -110,6 +112,8 @@ public class sueldo extends javax.swing.JFrame {
     }//GEN-LAST:event_ventasRBTNActionPerformed
 
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        menu menu = new menu();
+        menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_exitBTNActionPerformed
 

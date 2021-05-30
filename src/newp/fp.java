@@ -232,7 +232,9 @@ public class fp extends javax.swing.JFrame {
     }//GEN-LAST:event_borrarBtnActionPerformed
 
     private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
-        System.exit(0);
+        menu menu = new menu();
+        menu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_salirBtnActionPerformed
 
     /**

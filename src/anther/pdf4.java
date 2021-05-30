@@ -5,6 +5,8 @@
  */
 package anther;
 
+import newp.menu;
+
 /**
  *
  * @author casa
@@ -112,6 +114,8 @@ public class pdf4 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        menu menu = new menu();
+        menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

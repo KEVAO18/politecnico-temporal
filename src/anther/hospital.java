@@ -5,6 +5,8 @@
  */
 package anther;
 
+import newp.menu;
+
 /**
  *
  * @author casa
@@ -125,6 +127,8 @@ public class hospital extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        menu menu = new menu();
+        menu.setVisible(true);
         dispose();
     }//GEN-LAST:event_exitBTNActionPerformed
 
